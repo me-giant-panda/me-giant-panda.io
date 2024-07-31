@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chao Zhang's Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        p, ul {
+            line-height: 1.6;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .lang-toggle {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function toggleLang(lang) {
+            var elements = document.querySelectorAll('[lang]');
+            elements.forEach(element => {
+                if (element.getAttribute('lang') === lang) {
+                    element.style.display = 'block';
+                } else {
+                    element.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</head>
+<body onload="toggleLang('en')">
+    <header>
+        <h1 lang="en">Chao Zhang's Personal Website</h1>
+        <h1 lang="zh-CN">张超的个人网页</h1>
+        <span class="lang-toggle" onclick="toggleLang('en')">English</span> | 
+        <span class="lang-toggle" onclick="toggleLang('zh-CN')">中文</span>
+    </header>
+    <div class="container">
+        <div class="section">
+            <h2 lang="en">Basic Information</h2>
+            <h2 lang="zh-CN">基本信息</h2>
+            <p lang="en"><strong>Name:</strong> Chao Zhang</p>
+            <p lang="zh-CN"><strong>姓名：</strong>张超</p>
+            <p lang="en"><strong>Birth Date:</strong> August 13, 1997</p>
+            <p lang="zh-CN"><strong>出生日期：</strong>1997年8月13日</p>
+            <p lang="en"><strong>Nationality:</strong> Chinese</p>
+            <p lang="zh-CN"><strong>国籍：</strong>中国</p>
+            <p lang="en"><strong>Contact:</strong> +86 18856958681</p>
+            <p lang="zh-CN"><strong>联系方式：</strong>+86 18856958681</p>
+            <p lang="en"><strong>Email:</strong> zhangcha@mail.ustc.edu.cn</p>
+            <p lang="zh-CN"><strong>电子邮件：</strong>zhangcha@mail.ustc.edu.cn</p>
+        </div>
+        <div class="section">
+            <h2 lang="en">Education</h2>
+            <h2 lang="zh-CN">教育背景</h2>
+            <p lang="en"><strong>2015.09-2019.06</strong> University of Science and Technology of China, School of Physics, Bachelor in Photoelectric Information Science</p>
+            <p lang="zh-CN"><strong>2015.09-2019.06</strong> 中国科学技术大学 物理学院 光电信息科学 本科</p>
+            <p lang="en"><strong>Minor:</strong> Computer Science and Technology</p>
+            <p lang="zh-CN"><strong>辅修：</strong>计算机科学与技术</p>
+            <p lang="en"><strong>2019.09-Present</strong> University of Science and Technology of China, School of Physics, PhD in Physics (Quantum Optics)</p>
+            <p lang="zh-CN"><strong>2019.09-至今</strong> 中国科学技术大学 物理学院 物理（量子光学） 博士</p>
+        </div>
+        <div class="section">
+            <h2 lang="en">Work Experience</h2>
+            <h2 lang="zh-CN">工作经历</h2>
+            <p lang="en"><strong>2021.09-2022.02</strong> Teaching Assistant, University of Science and Technology of China</p>
+            <p lang="zh-CN"><strong>2021.09-2022.02</strong> 教学助理, 中国科学技术大学</p>
+            <p lang="en">Course: Optics. Lecturer: Prof. Bi-Heng Liu. Responsibilities included organizing exercise and Q&A classes, marking assignments and examination papers, assisting in tutoring students.</p>
+            <p lang="zh-CN">课程：光学，讲师：刘碧衡教授。主要职责包括组织练习和答疑课、批改作业和考试试卷、协助辅导学生。</p>
+            <p lang="en"><strong>2023.8-Present</strong> Research Assistant, Hefei National Laboratory</p>
+            <p lang="zh-CN"><strong>2023.8-至今</strong> 研究助理, 合肥国家实验室</p>
+            <p lang="en">Responsibilities included assisting in the construction and testing of high-dimensional quantum systems.</p>
+            <p lang="zh-CN">主要职责包括协助构建和测试高维量子系统。</p>
+        </div>
+        <div class="section">
+            <h2 lang="en">Research Achievements</h2>
+            <h2 lang="zh-CN">研究成果</h2>
+            <ul>
+                <li lang="en">Prepared a four-dimensional entangled source with 71.6% efficiency and tested high-dimensional Bell nonlocality without detection loophole. [PRL 129(6), 060402(2022)]</li>
+                <li lang="zh-CN">在没有检测漏洞的情况下，准备了效率为71.6%的四维纠缠源并测试了高维Bell非定域性。[PRL 129(6), 060402(2022)]</li>
+                <li lang="en">Teleported the CNOT gate to 7 km away to complete Bell state preparation and demonstrate Deutsch and phase estimation algorithms. [arXiv preprint arXiv:2307.15634]</li>
+                <li lang="zh-CN">实现了7公里外CNOT门的量子隐形传态，完成了Bell态制备并演示了Deutsch和相位估计算法。[arXiv preprint arXiv:2307.15634]</li>
+                <li lang="en">Utilized quantum catalysis to amplify the asymmetry resources of qubit, observing an effective increase in asymmetry resources even with experimental noise, marking the first experimental proof of quantum catalysis. [under review]</li>
+                <li lang="zh-CN">利用量子催化放大了量子比特的不对称资源，即使在实验噪声下，仍然观察到了有效的资源放大，这是首次实验验证量子催化。[under review]</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 lang="en">Skills</h2>
+            <h2 lang="zh-CN">技能</h2>
+            <ul>
+                <li lang="en">Construction of high-dimensional entanglement source with high efficiency and fidelity</li>
+                <li lang="zh-CN">高效高保真度高维纠缠源的构建</li>
+                <li lang="en">Coupling laser into waveguide and Optical narrowband filtering with etalon</li>
+                <li lang="zh-CN">激光耦合到波导和使用etalon进行光学窄带滤波</li>
+                <li lang="en">Locking optical interferometer with 30m arm difference</li>
+                <li lang="zh-CN">锁定光学干涉仪，臂长差为30米</li>
+                <li lang="en">Using electrical devices such as acousto-optic modulator (AOM) and electro-optic modulator (EOM)</li>
+                <li lang="zh-CN">使用电光调制器（EOM）和声光调制器（AOM）等电子设备</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2 lang="en">Software and Programming</h2>
+            <h2 lang="zh-CN">软件和编程</h2>
+            <ul>
+                <li lang="en">Software: Origin, 3ds Max, CorelDRAW, etc.</li>
+                <li lang="zh-CN">软件：Origin, 3ds Max, CorelDRAW等</li>
+                <li lang="en">Programming: Matlab, Mathematica, C, C++</li>
+                <li lang="zh-CN">编程：Matlab, Mathematica, C, C++</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p lang="en">Chao Zhang's Personal Website &copy; 2024</p>
+        <p lang="zh-CN">张超的个人网页 &copy; 2024</p>
+    </footer>
+</body>
+</html>
