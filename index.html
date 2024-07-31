@@ -3,148 +3,271 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chao Zhang's Personal Website</title>
+    <title>Chao Zhang's Personal Webpage</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
         }
         .container {
-            width: 80%;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
         .section {
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
-        h2 {
-            color: #333;
-            border-bottom: 2px solid #333;
+        .section h2 {
+            border-bottom: 2px solid #000;
             padding-bottom: 10px;
         }
-        p, ul {
-            line-height: 1.6;
+        .language-switch {
+            margin: 20px 0;
         }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .lang-toggle {
-            cursor: pointer;
-            text-decoration: underline;
+        .hidden {
+            display: none;
         }
     </style>
-    <script>
-        function toggleLang(lang) {
-            var elements = document.querySelectorAll('[lang]');
-            elements.forEach(element => {
-                if (element.getAttribute('lang') === lang) {
-                    element.style.display = 'block';
-                } else {
-                    element.style.display = 'none';
-                }
-            });
-        }
-    </script>
 </head>
-<body onload="toggleLang('en')">
-    <header>
-        <h1 lang="en">Chao Zhang's Personal Website</h1>
-        <h1 lang="zh-CN">张超的个人网页</h1>
-        <span class="lang-toggle" onclick="toggleLang('en')">English</span> | 
-        <span class="lang-toggle" onclick="toggleLang('zh-CN')">中文</span>
-    </header>
+<body>
     <div class="container">
-        <div class="section">
-            <h2 lang="en">Basic Information</h2>
-            <h2 lang="zh-CN">基本信息</h2>
-            <p lang="en"><strong>Name:</strong> Chao Zhang</p>
-            <p lang="zh-CN"><strong>姓名：</strong>张超</p>
-            <p lang="en"><strong>Birth Date:</strong> August 13, 1997</p>
-            <p lang="zh-CN"><strong>出生日期：</strong>1997年8月13日</p>
-            <p lang="en"><strong>Nationality:</strong> Chinese</p>
-            <p lang="zh-CN"><strong>国籍：</strong>中国</p>
-            <p lang="en"><strong>Contact:</strong> +86 18856958681</p>
-            <p lang="zh-CN"><strong>联系方式：</strong>+86 18856958681</p>
-            <p lang="en"><strong>Email:</strong> zhangcha@mail.ustc.edu.cn</p>
-            <p lang="zh-CN"><strong>电子邮件：</strong>zhangcha@mail.ustc.edu.cn</p>
+        <div class="language-switch">
+            <button onclick="switchLanguage('en')">English</button>
+            <button onclick="switchLanguage('cn')">中文</button>
         </div>
-        <div class="section">
-            <h2 lang="en">Education</h2>
-            <h2 lang="zh-CN">教育背景</h2>
-            <p lang="en"><strong>2015.09-2019.06</strong> University of Science and Technology of China, School of Physics, Bachelor in Photoelectric Information Science</p>
-            <p lang="zh-CN"><strong>2015.09-2019.06</strong> 中国科学技术大学 物理学院 光电信息科学 本科</p>
-            <p lang="en"><strong>Minor:</strong> Computer Science and Technology</p>
-            <p lang="zh-CN"><strong>辅修：</strong>计算机科学与技术</p>
-            <p lang="en"><strong>2019.09-Present</strong> University of Science and Technology of China, School of Physics, PhD in Physics (Quantum Optics)</p>
-            <p lang="zh-CN"><strong>2019.09-至今</strong> 中国科学技术大学 物理学院 物理（量子光学） 博士</p>
+        
+        <div id="en">
+            <div class="section">
+                <h2>Personal Information</h2>
+                <p><strong>Name:</strong> Chao Zhang</p>
+                <p><strong>Birth:</strong> August 13, 1997</p>
+                <p><strong>Email:</strong> zhangcha@mail.ustc.edu.cn</p>
+            </div>
+
+            <div class="section">
+                <h2>Education</h2>
+                <p><strong>2015.09-2019.06:</strong> University of Science and Technology of China, School of Physics, Photoelectric Information Science (Bachelor), Computer Science and Technology (Minor)</p>
+                <p><strong>2019.09-2024.06:</strong> University of Science and Technology of China, School of Physics, Physics (Quantum Optics) (PhD)</p>
+            </div>
+
+            <div class="section">
+                <h2>Self-appraise</h2>
+                <ul>
+                    <li>A stable personality and high sense of responsibility are desirable.</li>
+                    <li>Good academic foundation, the ability to analyze problems independently and propose solutions, willing to challenge difficulties and strong ability to resist setbacks.</li>
+                    <li>Have good research and summary skills for new technologies.</li>
+                    <li>Good communication and collaboration skills, enthusiastic to help group members solve problems.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Summary of Expertise</h2>
+                <ul>
+                    <li>Quantum nonlocality, including quantum Bell nonlocality, quantum steering, and quantum entanglement, is an important phenomenon of subverting local realism and an important resource for realizing quantum technologies such as random number generation, quantum key distribution, quantum teleportation, and so on.</li>
+                    <li>Design and build a high-dimensional and efficient entanglement source, and use Eberhard inequality to test the four-dimensional Bell nonlocality without detection loophole. Afterwards, we explore the relationship between Bell nonlocality and inherent randomness in high-dimensional systems with multiple measurements and multiple outputs.</li>
+                    <li>Exploring the rich structure of genuine one-way steering in high-dimensional systems. We perform theoretical characterization and experimental verification of the steering structure of corresponding entangled quantum states, where two parties can guide each other, but the phenomenon of asymmetric steering ability.</li>
+                    <li>Nonlocal quantum gates over 7.0 km. The 580 photons generated by parametric down conversion in PPLN waveguide with laser at 421nm are stored for 80us in laboratory A, and the 1537 photons generated are distributed to laboratory B 7km away by special low-loss fibers. Laboratories A and B respectively perform local CNOT operations. Detect the photons in laboratory B, and based on the results, use EOM to operate the photons in laboratory A (LOCC) to achieve the teleportation of CNOT. On this basis, we demonstrated the Deutsch and phase estimation algorithm.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Current Affiliation</h2>
+                <p>DTU, physics</p>
+            </div>
+
+            <div class="section">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Preparation of high-quality high-dimensional quantum entanglement sources</li>
+                    <li>Construction of optical systems to achieve quantum evolution and measurement.</li>
+                    <li>Optical system phase locking, use of optoelectronic devices (AOM, EOM) and etalon, etc.</li>
+                    <li>Close cooperation with domestic and foreign theoretical groups.</li>
+                    <li>Not procrastinating, full of work enthusiasm, self-driven scientific researchers.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Research Highlights</h2>
+                <ul>
+                    <li>Prepare four-dimensional entangled source with efficiency 71.6% and test high-dimensional Bell nonlocality without efficiency loophole. [PRL 129(6), 060402(2022)]</li>
+                    <li>Teleport the CNOT gate to 7km away to complete Bell state preparation and demonstrate Deutsch and phase estimation algorithms. [arXiv preprint arXiv:2307.15634]</li>
+                    <li>Utilizing quantum catalysis to amplify the asymmetry resources of qubit. In the presence of experimental noise, an effective increase in asymmetry resources of the qubit was still observed, which was the first experimental proof of quantum catalysis. [under review]</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Employment History</h2>
+                <p><strong>2021.09-2022.02:</strong> Teaching Assistant, University of Science and Technology of China. Course: Optics. Lecturer: Prof. Bi-Heng Liu. <p>
+		<p>Responsibility: Organize exercise and Q&A classes; Marking assignments and examination papers; Assist in tutoring students.</p>
+                <p><strong>2023.8-2024.06:</strong> Research Assistant, Hefei National Laboratory. <p>
+		<p>Responsibility: Assist in the construction and testing of high-dimensional quantum systems.</p>
+            </div>
+
+            <div class="section">
+                <h2>Academic Conferences</h2>
+                <ul>
+                    <li>The 20th National Quantum Optics Academic Conference (2022)</li>
+                    <li>The 9th Doctoral Academic Forum of the PFUNT Alliance (2022)</li>
+                    <li>The 14th International Conference on Information Optics and Photonics (CIOP2023)</li>
+                    <li>CPS Fall Meeting (2023)</li>
+                    <li>International Conference on Quantum Photonics (2023)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Certificates and Honors</h2>
+                <ul>
+                    <li>Excellent Student Scholarship (2016, 2017)</li>
+                    <li>Academic Scholarship of USTC (2019~2023)</li>
+                    <li>Tang ZhongYing Scholarship (2017, 2018)</li>
+                    <li>The Second Award of the Big Data + Mathematical Modeling Contest of USTC (2018)</li>
+                    <li>Excellent Oral Report Award of the 20th National Quantum Optics Academic Conference (2022)</li>
+                    <li>The Second Award of the 9th Doctoral Academic Forum of the Five University Alliance (2022)</li>
+                    <li>China Physics 2023 Autumn Conference Excellent Wall Poster Award (2023)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Research Publications</h2>
+                <ul>
+                    <li>1. XM Hu*, C Zhang*, BH Liu, Y Guo, WB Xing, CX Huang, YF Huang, CF Li, GC Guo. High-Dimensional Bell Test without Detection Loophole. Physical Review Letters 129 (6), 060402 (2022).</li>
+                    <li>2. R Qu*, C Zhang*, ZH Chang, Y Guo, XM Hu, CF Li, GC Guo, P Zhang, BH Liu. Observation of Diverse Asymmetric Structures in High-Dimensional Einstein-Podolsky-Rosen Steering. Physical Review Letters 132 (21), 210202 (2024).</li>
+                    <li>3. XM Hu, C Zhang, Y Guo, FX Wang, WB Xing, CX Huang, BH Liu, YF Huang, GC Guo, XQ Gao, M Pivoluska, M Huber. Pathways for entanglement-based quantum communication in the face of high noise. Physical Review Letters 127 (11), 110505 (2021).</li>
+                    <li>4. H Zhang*, C Zhang*, XM Hu, BH Liu, YF Huang, CF Li, GC Guo. Arbitrary two-particle high-dimensional Bell-state measurement by auxiliary entanglement. Physical Review A 99 (5), 052301 (2019).</li>
+                    <li>5. XM Hu, CX Huang, YB Sheng, L Zhou, BH Liu, Y Guo, C Zhang, WB Xing, YF Huang, CF Li, GC Guo. Long-distance entanglement purification for quantum communication. Physical Review Letters 126 (1), 010503.</li>
+                    <li>6. S Ru, CX Huang, XM Hu, C Zhang, F Wang, N Liu, WD Tang, P Zhang, BH Liu, FL Li. Experimental implementation of Hardy-like quantum pigeonhole paradoxes. Physical Review A 107 (2), 022207. </li>
+                    <li>7. XM Hu, CX Huang, YB Sheng, L Zhou, BH Liu, Y Guo, C Zhang, WB Xing, YF Huang, CF Li, GC Guo. Long-distance entanglement purification for quantum communication. Physical Review Letters 126 (1),010503.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Preprints</h2>
+                <p>1. C Zhang*, XM Hu*, F Ding, XY Hu, Y Guo, BH Liu, YF Huang, CF Li, GC Guo. Experimental Catalytic Amplification of Asymmetry. [under review]</p>
+                <p>2. C Zhang*, Y Li*, XM Hu*, Y Xiang, CF Li, GC Guo, J Tura, QY He, BH Liu. Randomness Certification with Multi-input and Multi-output in Nonlocality Scenario. [under review]</p>
+                <p>3. X Liu*, XM Hu*, TX Zhu*, C Zhang, YX Xiao, JL Miao, ZW Ou, BH Liu, ZQ Zhou, CF Li, GC Guo. Nonlocal quantum gates over 7.0 km. arXiv preprint arXiv:2307.15634. </p>
+                <p>4. LT Feng*, XM Hu*, M Zhang*, YJ Cheng, C Zhang, Y Guo, YY Ding, ZB Hou, FW Sun, GC Guo, DX Dai, A Tavakoli, XF Ren, BH Liu. Higher-dimensional symmetric informationally complete measurement via programmable photonic integrated optics. arXiv preprint arXiv: 2310.08838.</p>
+            </div>
         </div>
-        <div class="section">
-            <h2 lang="en">Work Experience</h2>
-            <h2 lang="zh-CN">工作经历</h2>
-            <p lang="en"><strong>2021.09-2022.02</strong> Teaching Assistant, University of Science and Technology of China</p>
-            <p lang="zh-CN"><strong>2021.09-2022.02</strong> 教学助理, 中国科学技术大学</p>
-            <p lang="en">Course: Optics. Lecturer: Prof. Bi-Heng Liu. Responsibilities included organizing exercise and Q&A classes, marking assignments and examination papers, assisting in tutoring students.</p>
-            <p lang="zh-CN">课程：光学，讲师：刘碧衡教授。主要职责包括组织练习和答疑课、批改作业和考试试卷、协助辅导学生。</p>
-            <p lang="en"><strong>2023.8-Present</strong> Research Assistant, Hefei National Laboratory</p>
-            <p lang="zh-CN"><strong>2023.8-至今</strong> 研究助理, 合肥国家实验室</p>
-            <p lang="en">Responsibilities included assisting in the construction and testing of high-dimensional quantum systems.</p>
-            <p lang="zh-CN">主要职责包括协助构建和测试高维量子系统。</p>
-        </div>
-        <div class="section">
-            <h2 lang="en">Research Achievements</h2>
-            <h2 lang="zh-CN">研究成果</h2>
-            <ul>
-                <li lang="en">Prepared a four-dimensional entangled source with 71.6% efficiency and tested high-dimensional Bell nonlocality without detection loophole. [PRL 129(6), 060402(2022)]</li>
-                <li lang="zh-CN">在没有检测漏洞的情况下，准备了效率为71.6%的四维纠缠源并测试了高维Bell非定域性。[PRL 129(6), 060402(2022)]</li>
-                <li lang="en">Teleported the CNOT gate to 7 km away to complete Bell state preparation and demonstrate Deutsch and phase estimation algorithms. [arXiv preprint arXiv:2307.15634]</li>
-                <li lang="zh-CN">实现了7公里外CNOT门的量子隐形传态，完成了Bell态制备并演示了Deutsch和相位估计算法。[arXiv preprint arXiv:2307.15634]</li>
-                <li lang="en">Utilized quantum catalysis to amplify the asymmetry resources of qubit, observing an effective increase in asymmetry resources even with experimental noise, marking the first experimental proof of quantum catalysis. [under review]</li>
-                <li lang="zh-CN">利用量子催化放大了量子比特的不对称资源，即使在实验噪声下，仍然观察到了有效的资源放大，这是首次实验验证量子催化。[under review]</li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2 lang="en">Skills</h2>
-            <h2 lang="zh-CN">技能</h2>
-            <ul>
-                <li lang="en">Construction of high-dimensional entanglement source with high efficiency and fidelity</li>
-                <li lang="zh-CN">高效高保真度高维纠缠源的构建</li>
-                <li lang="en">Coupling laser into waveguide and Optical narrowband filtering with etalon</li>
-                <li lang="zh-CN">激光耦合到波导和使用etalon进行光学窄带滤波</li>
-                <li lang="en">Locking optical interferometer with 30m arm difference</li>
-                <li lang="zh-CN">锁定光学干涉仪，臂长差为30米</li>
-                <li lang="en">Using electrical devices such as acousto-optic modulator (AOM) and electro-optic modulator (EOM)</li>
-                <li lang="zh-CN">使用电光调制器（EOM）和声光调制器（AOM）等电子设备</li>
-            </ul>
-        </div>
-        <div class="section">
-            <h2 lang="en">Software and Programming</h2>
-            <h2 lang="zh-CN">软件和编程</h2>
-            <ul>
-                <li lang="en">Software: Origin, 3ds Max, CorelDRAW, etc.</li>
-                <li lang="zh-CN">软件：Origin, 3ds Max, CorelDRAW等</li>
-                <li lang="en">Programming: Matlab, Mathematica, C, C++</li>
-                <li lang="zh-CN">编程：Matlab, Mathematica, C, C++</li>
-            </ul>
+
+        <div id="cn" class="hidden">
+            <div class="section">
+                <h2>个人信息</h2>
+                <p><strong>姓名：</strong>张超</p>
+                <p><strong>出生日期：</strong>1997年8月13日</p>
+                <p><strong>国籍：</strong>中国</p>
+                <p><strong>手机：</strong>+86 18856958681</p>
+                <p><strong>邮箱：</strong>zhangcha@mail.ustc.edu.cn</p>
+            </div>
+
+            <div class="section">
+                <h2>教育经历</h2>
+                <p><strong>2015.09-2019.06：</strong>中国科学技术大学，物理学院，光电信息科学（本科），计算机科学与技术（辅修）</p>
+                <p><strong>2019.09-至今：</strong>中国科学技术大学，物理学院，物理（量子光学）（博士）</p>
+            </div>
+
+            <div class="section">
+                <h2>自我评价</h2>
+                <ul>
+                    <li>具有稳定的性格和高度的责任感。</li>
+                    <li>扎实的学术基础，能够独立分析问题并提出解决方案，愿意挑战困难，抗挫能力强。</li>
+                    <li>具备良好的新技术研究和总结能力。</li>
+                    <li>良好的沟通和协作能力，热心帮助组员解决问题。</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>专业知识摘要</h2>
+                <ul>
+                    <li>量子非局域性，包括量子贝尔非局域性、量子引导和量子纠缠，是颠覆局域实在论的重要现象，也是实现量子技术如随机数生成、量子密钥分发、量子传态等的重要资源。</li>
+                    <li>设计并构建高维高效纠缠源，并使用Eberhard不等式在无检测漏洞的情况下测试四维贝尔非局域性。随后，我们在多测量和多输出的高维系统中探讨贝尔非局域性与内在随机性的关系。</li>
+                    <li>探索高维系统中真实单向引导的丰富结构。我们对相应纠缠量子态的引导结构进行理论表征和实验验证，其中双方可以互相引导，但存在非对称引导能力的现象。</li>
+                    <li>跨越7.0公里的非局域量子门。421nm激光在PPLN波导中通过参量下转换产生的580个光子在实验室A中存储80us，而1537个光子通过特殊低损耗光纤分发到7公里外的实验室B。A和B实验室分别执行局部CNOT操作。检测B实验室中的光子，并根据结果使用EOM操作A实验室中的光子（LOCC），实现CNOT的传态。在此基础上，我们展示了Deutsch和相位估计算法。</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>目前所属机构</h2>
+                <p>丹麦科技大学物理系</p>
+            </div>
+
+            <div class="section">
+                <h2>技能</h2>
+                <ul>
+                    <li>制备高质量的高维量子纠缠源</li>
+                    <li>构建光学系统实现量子演化和测量。</li>
+                    <li>光学系统相位锁定，使用光电设备（AOM、EOM）和标准具等。</li>
+                    <li>与国内外理论组紧密合作。</li>
+                    <li>不拖延，工作热情充沛，自驱动的科学研究者。</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>研究亮点</h2>
+                <ul>
+                    <li>制备效率为71.6%的四维纠缠源并无效率漏洞地测试高维贝尔非局域性。[PRL 129(6), 060402(2022)]</li>
+                    <li>将CNOT门传态到7公里外完成贝尔态制备并展示Deutsch和相位估计算法。[arXiv preprint arXiv:2307.15634]</li>
+                    <li>利用量子催化放大量子比特的非对称资源。在存在实验噪声的情况下，仍然有效地增加了量子比特的非对称资源，这是量子催化的首次实验证明。[under review]</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>工作经历</h2>
+                <p><strong>2021.09-2022.02：</strong>中国科学技术大学，教学助理。课程：光学。教师：柳必恒教授。职责：组织习题和答疑课；批改作业和试卷；协助指导学生。</p>
+                <p><strong>2023.8-至今：</strong>合肥国家实验室，研究助理。职责：协助构建和测试高维量子系统。</p>
+            </div>
+
+            <div class="section">
+                <h2>学术会议</h2>
+                <ul>
+                    <li>第20届全国量子光学学术会议（2022）</li>
+                    <li>第9届PFUNT联盟博士生学术论坛（2022）</li>
+                    <li>第14届信息光学与光子学国际会议（CIOP2023）</li>
+                    <li>中国物理学会秋季会议（2023）</li>
+                    <li>量子光子学国际会议（2023）</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>证书与荣誉</h2>
+                <ul>
+                    <li>优秀学生奖学金（2016、2017）</li>
+                    <li>中科大学术奖学金（2019~2023）</li>
+                    <li>唐仲英奖学金（2017、2018）</li>
+                    <li>中科大大数据+数学建模竞赛二等奖（2018）</li>
+                    <li>第20届全国量子光学学术会议优秀口头报告奖（2022）</li>
+                    <li>第9届五校联盟博士生学术论坛二等奖（2022）</li>
+                    <li>中国物理2023秋季会议优秀墙报奖（2023）</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Research Publications</h2>
+                <ul>
+                    <li>1. XM Hu*, C Zhang*, BH Liu, Y Guo, WB Xing, CX Huang, YF Huang, CF Li, GC Guo. High-Dimensional Bell Test without Detection Loophole. Physical Review Letters 129 (6), 060402 (2022).</li>
+                    <li>2. R Qu*, C Zhang*, ZH Chang, Y Guo, XM Hu, CF Li, GC Guo, P Zhang, BH Liu. Observation of Diverse Asymmetric Structures in High-Dimensional Einstein-Podolsky-Rosen Steering. Physical Review Letters 132 (21), 210202 (2024).</li>
+                    <li>3. XM Hu, C Zhang, Y Guo, FX Wang, WB Xing, CX Huang, BH Liu, YF Huang, GC Guo, XQ Gao, M Pivoluska, M Huber. Pathways for entanglement-based quantum communication in the face of high noise. Physical Review Letters 127 (11), 110505 (2021).</li>
+                    <li>4. H Zhang*, C Zhang*, XM Hu, BH Liu, YF Huang, CF Li, GC Guo. Arbitrary two-particle high-dimensional Bell-state measurement by auxiliary entanglement. Physical Review A 99 (5), 052301 (2019).</li>
+                    <li>5. XM Hu, CX Huang, YB Sheng, L Zhou, BH Liu, Y Guo, C Zhang, WB Xing, YF Huang, CF Li, GC Guo. Long-distance entanglement purification for quantum communication. Physical Review Letters 126 (1), 010503.</li>
+                    <li>6. S Ru, CX Huang, XM Hu, C Zhang, F Wang, N Liu, WD Tang, P Zhang, BH Liu, FL Li. Experimental implementation of Hardy-like quantum pigeonhole paradoxes. Physical Review A 107 (2), 022207. </li>
+                    <li>7. XM Hu, CX Huang, YB Sheng, L Zhou, BH Liu, Y Guo, C Zhang, WB Xing, YF Huang, CF Li, GC Guo. Long-distance entanglement purification for quantum communication. Physical Review Letters 126 (1),010503.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Preprints</h2>
+                <p>1. C Zhang*, XM Hu*, F Ding, XY Hu, Y Guo, BH Liu, YF Huang, CF Li, GC Guo. Experimental Catalytic Amplification of Asymmetry. [under review]</p>
+                <p>2. C Zhang*, Y Li*, XM Hu*, Y Xiang, CF Li, GC Guo, J Tura, QY He, BH Liu. Randomness Certification with Multi-input and Multi-output in Nonlocality Scenario. [under review]</p>
+                <p>3. X Liu*, XM Hu*, TX Zhu*, C Zhang, YX Xiao, JL Miao, ZW Ou, BH Liu, ZQ Zhou, CF Li, GC Guo. Nonlocal quantum gates over 7.0 km. arXiv preprint arXiv:2307.15634. </p>
+                <p>4. LT Feng*, XM Hu*, M Zhang*, YJ Cheng, C Zhang, Y Guo, YY Ding, ZB Hou, FW Sun, GC Guo, DX Dai, A Tavakoli, XF Ren, BH Liu. Higher-dimensional symmetric informationally complete measurement via programmable photonic integrated optics. arXiv preprint arXiv: 2310.08838.</p>
+            </div>
         </div>
     </div>
-    <footer>
-        <p lang="en">Chao Zhang's Personal Website &copy; 2024</p>
-        <p lang="zh-CN">张超的个人网页 &copy; 2024</p>
-    </footer>
+
+    <script>
+        function switchLanguage(language) {
+            document.getElementById('en').classList.add('hidden');
+            document.getElementById('cn').classList.add('hidden');
+            document.getElementById(language).classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
